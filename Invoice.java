@@ -30,6 +30,10 @@ class Invoice
         int num = 0;
         Scanner input = new Scanner(System.in);
         while(true){
+            if(num>0){
+                // bug fix: consume new line character to prevent customer name input skip
+                input.nextLine();
+            }
             // Get user to input name, appointment charge, and parts&labor charge
             Invoice invoice = new Invoice();
             System.out.print("\n\nEnter customer's name : ");
